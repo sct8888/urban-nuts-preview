@@ -2,19 +2,19 @@
 <html lang="en-ZA">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Product · Urban Nuts Preview</title>
   <meta name="description" content="Product detail with size variants and add to cart.">
   <base href="./">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="https://urban-nuts.co.za/wp-content/uploads/2022/02/URBAN-NUTS-logo-1.jpg">
 </head>
 <body>
   <div class="preview-bar">Urban Nuts website preview · not the live store</div>
-  <div class="delivery-banner"><strong>FREE DELIVERY</strong> on orders over <strong>R1 000</strong><span>Cape Town specialty nuts &amp; dried fruit</span></div>
+  <div class="delivery-banner"><strong>FREE DELIVERY</strong> on orders over <strong>R1 000</strong><span> · Cape Town specialty</span></div>
   <header class="site-header">
     <div class="container header-inner">
       <a class="logo" href="index.html">
@@ -41,6 +41,10 @@
     <a href="shop.html">Shop</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
+    <div class="nav-meta">
+      <a href="tel:0836277992">083 627 7992</a>
+      <a href="mailto:info@urbannuts.co.za">info@urbannuts.co.za</a>
+    </div>
   </nav>
 
   <main>
@@ -98,6 +102,19 @@
       </div>
     </div>
   </footer>
+
+  <nav class="mobile-bottom-bar" aria-label="Quick actions">
+    <a href="shop.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+      Shop
+    </a>
+    <button type="button" data-open-cart>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M6 6L5 3H2"/></svg>
+      Cart
+      <span class="cart-count" data-count="0"></span>
+    </button>
+  </nav>
+
   <script src="js/products.js"></script>
   <script src="js/cart.js"></script>
   <script src="js/main.js"></script>
