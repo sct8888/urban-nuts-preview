@@ -991,3 +991,40 @@ button { -webkit-tap-highlight-color: transparent; }
     transition-duration: 0.01ms !important;
   }
 }
+
+
+.product-media {
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: #111;
+  position: relative;
+}
+.product-media img,
+.pd-media img,
+.cat-media img,
+.cart-item-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .45s ease;
+}
+.product-card:hover .product-media img { transform: scale(1.05); }
+.pd-media {
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: #111;
+  border-radius: 16px;
+}
+.cat-media {
+  aspect-ratio: 1.1;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #111;
+  margin-bottom: 10px;
+}
+.product-media .placeholder,
+.pd-media .placeholder { display: none !important; }
+
+.editorial-media { padding: 0 !important; overflow: hidden; }
+.editorial-media img { width: 100%; height: 100%; min-height: 280px; object-fit: cover; }
