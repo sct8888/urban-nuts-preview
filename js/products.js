@@ -1,12 +1,12 @@
-/* Demo product catalogue — Urban Nuts preview */
+/* Demo product catalogue  -  Urban Nuts preview */
 window.URBAN_NUTS = window.URBAN_NUTS || {};
 
 window.URBAN_NUTS.categories = [
-  { id: "nuts", name: "Nuts", icon: "🥜", blurb: "Premium roasted & raw" },
-  { id: "dried-fruit", name: "Dried Fruit", icon: "🍇", blurb: "Sun-kissed & juicy" },
-  { id: "coated", name: "Coated", icon: "🍫", blurb: "Chocolate & yoghurt" },
-  { id: "seeds", name: "Seeds & Grains", icon: "🌾", blurb: "Wholesome staples" },
-  { id: "mixes", name: "Mixes", icon: "✨", blurb: "Ready-to-snack blends" }
+  { id: "nuts", name: "Nuts", image: "https://urban-nuts.co.za/wp-content/uploads/2022/02/ALMONDS-copy-600x600.jpg", blurb: "Premium roasted & raw" },
+  { id: "dried-fruit", name: "Dried Fruit", image: "https://urban-nuts.co.za/wp-content/uploads/2022/03/2319012A-AFBC-4157-BE91-AF90E104FC67-300x300.jpeg", blurb: "Sun-kissed & juicy" },
+  { id: "coated", name: "Coated", image: "https://urban-nuts.co.za/wp-content/uploads/2022/02/PEANUTS-copy-600x600.jpg", blurb: "Chocolate & yoghurt" },
+  { id: "seeds", name: "Seeds & Grains", image: "https://urban-nuts.co.za/wp-content/uploads/2022/02/SEEDS-CATEGORY-copy-e1648126041145-300x300.jpg", blurb: "Wholesome staples" },
+  { id: "mixes", name: "Mixes", image: "https://urban-nuts.co.za/wp-content/uploads/2022/03/BCA269C3-B817-4505-99BE-FCAC3D616820-scaled-e1648117621340-600x602.jpeg", blurb: "Ready-to-snack blends" }
 ];
 
 window.URBAN_NUTS.stores = [
@@ -23,9 +23,9 @@ window.URBAN_NUTS.products = [
     id: "wasabi-peanuts",
     name: "Wasabi Coated Peanuts",
     category: "coated",
-    emoji: "🌶️",
+    image: "https://urban-nuts.co.za/wp-content/uploads/2022/02/PEANUTS-copy-600x600.jpg",
     badge: "Popular",
-    description: "Crisp peanuts with a bold wasabi kick — a Cape Town favourite for spice lovers.",
+    description: "Crisp peanuts with a bold wasabi kick  -  a Cape Town favourite for spice lovers.",
     variants: [
       { id: "100g", label: "100g", price: 28 },
       { id: "250g", label: "250g", price: 62 },
@@ -37,9 +37,9 @@ window.URBAN_NUTS.products = [
     id: "mixed-nuts",
     name: "Mixed Nuts",
     category: "nuts",
-    emoji: "🥜",
+    image: "https://urban-nuts.co.za/wp-content/uploads/2022/03/BCA269C3-B817-4505-99BE-FCAC3D616820-scaled-e1648117621340-600x602.jpeg",
     badge: "Best seller",
-    description: "A carefully balanced blend of cashews, almonds, Brazil nuts and more — premium, never oily.",
+    description: "A carefully balanced blend of cashews, almonds, Brazil nuts and more  -  premium, never oily.",
     variants: [
       { id: "100g", label: "100g", price: 29 },
       { id: "250g", label: "250g", price: 68 },
@@ -51,8 +51,8 @@ window.URBAN_NUTS.products = [
     id: "pine-kernels",
     name: "Pine Kernels",
     category: "nuts",
-    emoji: "🌲",
-    description: "Delicate, buttery pine nuts — ideal for pesto, salads and gourmet cooking.",
+    image: "https://urban-nuts.co.za/wp-content/uploads/2022/02/PECANS-600x600.jpg",
+    description: "Delicate, buttery pine nuts  -  ideal for pesto, salads and gourmet cooking.",
     variants: [
       { id: "100g", label: "100g", price: 176 },
       { id: "250g", label: "250g", price: 398 },
@@ -64,7 +64,7 @@ window.URBAN_NUTS.products = [
     id: "cashews-raw",
     name: "Raw Cashews",
     category: "nuts",
-    emoji: "🤍",
+    image: "https://urban-nuts.co.za/wp-content/uploads/2022/02/CASHEWS-600x600.jpg",
     badge: "Premium",
     description: "Creamy whole cashews, carefully selected for freshness and size.",
     variants: [
@@ -78,8 +78,8 @@ window.URBAN_NUTS.products = [
     id: "almonds",
     name: "Raw Almonds",
     category: "nuts",
-    emoji: "🌰",
-    description: "Crunchy California-style almonds — a pantry essential for snacking and baking.",
+    image: "https://urban-nuts.co.za/wp-content/uploads/2022/02/ALMONDS-copy-600x600.jpg",
+    description: "Crunchy California-style almonds  -  a pantry essential for snacking and baking.",
     variants: [
       { id: "100g", label: "100g", price: 38 },
       { id: "250g", label: "250g", price: 86 },
@@ -91,8 +91,8 @@ window.URBAN_NUTS.products = [
     id: "mebos",
     name: "Mebos",
     category: "dried-fruit",
-    emoji: "🍑",
-    description: "Traditional South African apricot confection — soft, tangy and irresistibly moreish.",
+    image: "https://urban-nuts.co.za/wp-content/uploads/2022/02/ROASTED-PEANUTS-IN-SHELL-copy.jpg",
+    description: "Traditional South African apricot confection  -  soft, tangy and irresistibly moreish.",
     variants: [
       { id: "100g", label: "100g", price: 20 },
       { id: "250g", label: "250g", price: 48 },
@@ -104,8 +104,8 @@ window.URBAN_NUTS.products = [
     id: "golden-sultanas",
     name: "Raisins (Golden Sultanas)",
     category: "dried-fruit",
-    emoji: "☀️",
-    description: "Plump golden sultanas with natural sweetness — baking, trail mixes and breakfast bowls.",
+    image: "https://urban-nuts.co.za/wp-content/uploads/2022/02/BLACK-BEANS-copy-600x600.jpg",
+    description: "Plump golden sultanas with natural sweetness  -  baking, trail mixes and breakfast bowls.",
     variants: [
       { id: "100g", label: "100g", price: 9 },
       { id: "250g", label: "250g", price: 20 },
@@ -117,8 +117,8 @@ window.URBAN_NUTS.products = [
     id: "jumbo-raisins",
     name: "Raisins (Jumbo)",
     category: "dried-fruit",
-    emoji: "🍇",
-    description: "Extra-large juicy raisins — a classic lunchbox and baking staple.",
+    image: "https://urban-nuts.co.za/wp-content/uploads/2022/02/CHICKPEAS-1-600x600.jpg",
+    description: "Extra-large juicy raisins  -  a classic lunchbox and baking staple.",
     variants: [
       { id: "100g", label: "100g", price: 9 },
       { id: "250g", label: "250g", price: 20 },
@@ -130,8 +130,8 @@ window.URBAN_NUTS.products = [
     id: "fruit-lollies",
     name: "Fruit Lollies, Flakes & Cubes",
     category: "dried-fruit",
-    emoji: "🍭",
-    description: "Colourful dried fruit shapes — fun for kids and beautiful on dessert boards.",
+    image: "https://urban-nuts.co.za/wp-content/uploads/2022/02/COUS-COUS-copy-600x600.jpg",
+    description: "Colourful dried fruit shapes  -  fun for kids and beautiful on dessert boards.",
     variants: [
       { id: "100g", label: "100g", price: 17 },
       { id: "250g", label: "250g", price: 40 },
@@ -143,8 +143,8 @@ window.URBAN_NUTS.products = [
     id: "yoghurt-peanuts",
     name: "Yoghurt Coated Peanuts",
     category: "coated",
-    emoji: "🥛",
-    description: "Smooth yoghurt coating over crunchy peanuts — sweet, creamy and crowd-pleasing.",
+    image: "https://urban-nuts.co.za/wp-content/uploads/2022/02/SEEDS-CATEGORY-copy-e1648126041145-300x300.jpg",
+    description: "Smooth yoghurt coating over crunchy peanuts  -  sweet, creamy and crowd-pleasing.",
     variants: [
       { id: "100g", label: "100g", price: 21 },
       { id: "250g", label: "250g", price: 48 },
@@ -156,9 +156,9 @@ window.URBAN_NUTS.products = [
     id: "sugar-free-coated",
     name: "Sugar-Free Coated Products",
     category: "coated",
-    emoji: "💚",
+    image: "https://urban-nuts.co.za/wp-content/uploads/2022/03/2319012A-AFBC-4157-BE91-AF90E104FC67-300x300.jpeg",
     badge: "Rated 5★",
-    description: "Indulgent coated snacks without the sugar — crafted for mindful snacking.",
+    description: "Indulgent coated snacks without the sugar  -  crafted for mindful snacking.",
     variants: [
       { id: "100g", label: "100g", price: 24 },
       { id: "250g", label: "250g", price: 58 },
@@ -170,8 +170,8 @@ window.URBAN_NUTS.products = [
     id: "choc-popcorn",
     name: "Chocolate Drizzle Popcorn",
     category: "coated",
-    emoji: "🍿",
-    description: "Light popcorn finished with a rich chocolate drizzle — movie-night perfection.",
+    image: "https://urban-nuts.co.za/wp-content/uploads/2022/03/28352426-0FCA-4799-ADAE-86C157214255-300x300.jpeg",
+    description: "Light popcorn finished with a rich chocolate drizzle  -  movie-night perfection.",
     variants: [
       { id: "100g", label: "100g", price: 22 },
       { id: "250g", label: "250g", price: 52 },
@@ -183,8 +183,8 @@ window.URBAN_NUTS.products = [
     id: "chia-seeds",
     name: "Chia Seeds",
     category: "seeds",
-    emoji: "🖤",
-    description: "Tiny powerhouses of omega-3 and fibre — puddings, smoothies and overnight oats.",
+    image: "https://urban-nuts.co.za/wp-content/uploads/2022/03/5CC065FB-EEB2-47B7-8674-87C592282653-scaled-e1648110929177-300x300.jpeg",
+    description: "Tiny powerhouses of omega-3 and fibre  -  puddings, smoothies and overnight oats.",
     variants: [
       { id: "100g", label: "100g", price: 29 },
       { id: "250g", label: "250g", price: 62 },
@@ -196,8 +196,8 @@ window.URBAN_NUTS.products = [
     id: "pumpkin-seeds",
     name: "Pumpkin Seeds",
     category: "seeds",
-    emoji: "🎃",
-    description: "Crunchy pepitas packed with minerals — toast them or sprinkle over salads.",
+    image: "https://urban-nuts.co.za/wp-content/uploads/2022/03/8C42ECDB-892B-4F70-B4E5-E09C87E54A76-300x300.jpeg",
+    description: "Crunchy pepitas packed with minerals  -  toast them or sprinkle over salads.",
     variants: [
       { id: "100g", label: "100g", price: 31 },
       { id: "250g", label: "250g", price: 68 },
@@ -209,7 +209,7 @@ window.URBAN_NUTS.products = [
     id: "linseed",
     name: "Linseed",
     category: "seeds",
-    emoji: "🟤",
+    image: "https://urban-nuts.co.za/wp-content/uploads/2022/03/55700E3D-CF5C-45D5-98BE-53609D1A48FA-300x300.jpeg",
     description: "Nutty flax seeds for baking, cereals and wholesome everyday nutrition.",
     variants: [
       { id: "100g", label: "100g", price: 11 },
@@ -222,7 +222,7 @@ window.URBAN_NUTS.products = [
     id: "bulgar-wheat",
     name: "Bulgar Wheat",
     category: "seeds",
-    emoji: "🌾",
+    image: "https://urban-nuts.co.za/wp-content/uploads/2022/03/A27E0C13-3AC4-473F-8938-AFE6C94F08AF-300x300.jpeg",
     description: "Quick-cooking bulgar for tabbouleh, grain bowls and hearty sides.",
     variants: [
       { id: "500g", label: "500g", price: 49 },
@@ -233,9 +233,9 @@ window.URBAN_NUTS.products = [
     id: "trail-mix",
     name: "Classic Trail Mix",
     category: "mixes",
-    emoji: "🥾",
+    image: "https://urban-nuts.co.za/wp-content/uploads/2022/03/9BA2E58A-61B3-4357-B327-4D6774388FA6-300x300.jpeg",
     badge: "New",
-    description: "Nuts, seeds and dried fruit in one go-anywhere mix — fuel for Cape Town adventures.",
+    description: "Nuts, seeds and dried fruit in one go-anywhere mix  -  fuel for Cape Town adventures.",
     variants: [
       { id: "100g", label: "100g", price: 32 },
       { id: "250g", label: "250g", price: 72 },
@@ -247,8 +247,8 @@ window.URBAN_NUTS.products = [
     id: "student-mix",
     name: "Student Mix",
     category: "mixes",
-    emoji: "📚",
-    description: "An energetic blend of nuts, raisins and coated bites — study-session approved.",
+    image: "https://urban-nuts.co.za/wp-content/uploads/2022/03/77B6C559-0429-4AFD-85FA-DAA77E0163F4-scaled-e1648121617873-300x300.jpeg",
+    description: "An energetic blend of nuts, raisins and coated bites  -  study-session approved.",
     variants: [
       { id: "100g", label: "100g", price: 26 },
       { id: "250g", label: "250g", price: 58 },
@@ -260,8 +260,8 @@ window.URBAN_NUTS.products = [
     id: "luxury-mix",
     name: "Luxury Nut Mix",
     category: "mixes",
-    emoji: "💎",
-    description: "Macadamias, pistachios, cashews and almonds — our most indulgent house blend.",
+    image: "https://urban-nuts.co.za/wp-content/uploads/2022/03/7592FE2E-B858-446E-984A-17AAE40FBB77-scaled-e1648124911531-300x300.jpeg",
+    description: "Macadamias, pistachios, cashews and almonds  -  our most indulgent house blend.",
     variants: [
       { id: "100g", label: "100g", price: 58 },
       { id: "250g", label: "250g", price: 132 },
@@ -273,7 +273,7 @@ window.URBAN_NUTS.products = [
     id: "energy-mix",
     name: "Energy Boost Mix",
     category: "mixes",
-    emoji: "⚡",
+    image: "https://urban-nuts.co.za/wp-content/uploads/2022/03/07FC5B73-6F25-4CDD-83BF-1FD2A000A02C-scaled-e1648120425438-300x300.jpeg",
     description: "Seeds, cranberries and roasted nuts tuned for sustained energy on the go.",
     variants: [
       { id: "100g", label: "100g", price: 34 },
