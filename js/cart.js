@@ -56,6 +56,9 @@
       }
       save(items);
       showToast("Added to cart");
+      if (window.URBAN_NUTS.ui && window.URBAN_NUTS.ui.bounceCartIcons) {
+        window.URBAN_NUTS.ui.bounceCartIcons();
+      }
       openCart();
     },
 
