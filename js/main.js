@@ -1,30 +1,55 @@
-/* Shared UI helpers */
+/* Shared UI helpers — Urban Nuts preview */
 (function () {
   function qs(sel, root) { return (root || document).querySelector(sel); }
   function qsa(sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); }
 
+  function categoryName(id) {
+    const c = window.URBAN_NUTS.categories.find(function (x) { return x.id === id; });
+    return c ? c.name : id;
+  }
+
   function productCardHTML(p) {
     const badge = p.badge ? `<span class="product-badge">${p.badge}</span>` : "";
+    const weight = p.variants[0] ? p.variants[0].label : "";
+    const defaultVid = p.variants[0] ? p.variants[0].id : "";
     return `
       <article class="product-card">
-        <a href="product.html?id=${encodeURIComponent(p.id)}" class="product-media" aria-label="${p.name}">
+        <a href="product.html?id=${encodeURIComponent(p.id)}" class="product-media tone-${p.category}" aria-label="${p.name}">
           ${badge}
+          <span class="weight-badge">${weight}</span>
           <div class="placeholder">${p.emoji || "🥜"}</div>
         </a>
         <div class="product-body">
           <div class="product-cat">${categoryName(p.category)}</div>
           <h3><a href="product.html?id=${encodeURIComponent(p.id)}">${p.name}</a></h3>
           <div class="product-price">
-            <span><span class="from">from</span>${window.URBAN_NUTS.formatZAR(p.variants[0].price)}</span>
-            <a href="product.html?id=${encodeURIComponent(p.id)}" class="btn btn-secondary btn-sm">View</a>
+            <span><span class="from">from</span><span class="amount">${window.URBAN_NUTS.formatZAR(p.variants[0].price)}</span></span>
+            <button type="button" class="btn-add" data-quick-add="${p.id}" data-vid="${defaultVid}" aria-label="Add ${p.name} to cart">Add</button>
           </div>
         </div>
       </article>`;
   }
 
-  function categoryName(id) {
-    const c = window.URBAN_NUTS.categories.find(function (x) { return x.id === id; });
-    return c ? c.name : id;
+  function bindQuickAdd(root) {
+    (root || document).addEventListener("click", function (e) {
+      const btn = e.target.closest("[data-quick-add]");
+      if (!btn) return;
+      e.preventDefault();
+      e.stopPropagation();
+      const id = btn.getAttribute("data-quick-add");
+      const vid = btn.getAttribute("data-vid");
+      window.URBAN_NUTS.Cart.add(id, vid, 1);
+      bounceCartIcons();
+    });
+  }
+
+  function bounceCartIcons() {
+    qsa(".icon-btn[data-open-cart], .mobile-bottom-bar [data-open-cart]").forEach(function (el) {
+      el.classList.remove("bounce");
+      void el.offsetWidth;
+      el.classList.add("bounce");
+      setTimeout(function () { el.classList.remove("bounce"); }, 500);
+    });
   }
 
   function renderFeatured(targetSel, limit) {
@@ -101,7 +126,7 @@
     function paint() {
       const v = currentVariant();
       root.innerHTML = `
-        <div class="pd-media"><div class="placeholder">${p.emoji || "🥜"}</div></div>
+        <div class="pd-media tone-${p.category}"><div class="placeholder">${p.emoji || "🥜"}</div></div>
         <div class="pd-info">
           <div class="pd-cat">${categoryName(p.category)}</div>
           <h1>${p.name}</h1>
@@ -120,7 +145,7 @@
               <button type="button" id="qty-inc" aria-label="Increase">+</button>
             </div>
           </div>
-          <button type="button" class="btn btn-primary" id="add-to-cart">Add to cart</button>
+          <button type="button" class="btn btn-primary btn-block" id="add-to-cart">Add to cart</button>
           <ul class="pd-meta">
             <li>Free delivery on orders over R1 000</li>
             <li>Freshness guaranteed · packed in Cape Town</li>
@@ -141,6 +166,7 @@
       });
       qs("#add-to-cart", root).addEventListener("click", function () {
         window.URBAN_NUTS.Cart.add(p.id, variantId, qty);
+        bounceCartIcons();
       });
     }
     paint();
@@ -197,6 +223,7 @@
   document.addEventListener("DOMContentLoaded", function () {
     initMobileNav();
     setActiveNav();
+    bindQuickAdd(document);
     renderCategories("#cat-grid");
     renderFeatured("#featured-grid", 8);
     renderShop();
@@ -205,5 +232,9 @@
     initContactForm();
   });
 
-  window.URBAN_NUTS.ui = { productCardHTML: productCardHTML, categoryName: categoryName };
+  window.URBAN_NUTS.ui = {
+    productCardHTML: productCardHTML,
+    categoryName: categoryName,
+    bounceCartIcons: bounceCartIcons
+  };
 })();
