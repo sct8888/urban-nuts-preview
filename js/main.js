@@ -17,7 +17,7 @@
         <a href="product.html?id=${encodeURIComponent(p.id)}" class="product-media tone-${p.category}" aria-label="${p.name}">
           ${badge}
           <span class="weight-badge">${weight}</span>
-          <div class="placeholder">${p.emoji || "🥜"}</div>
+          <img src="${p.image}" alt="${p.name}" loading="lazy" width="600" height="600">
         </a>
         <div class="product-body">
           <div class="product-cat">${categoryName(p.category)}</div>
@@ -65,7 +65,7 @@
     el.innerHTML = window.URBAN_NUTS.categories.map(function (c) {
       return `
         <a class="cat-card" href="shop.html?cat=${encodeURIComponent(c.id)}">
-          <div class="icon">${c.icon}</div>
+          <div class="cat-media"><img src="${c.image}" alt="${c.name}" loading="lazy" width="400" height="400"></div>
           <h3>${c.name}</h3>
           <span>${c.blurb}</span>
         </a>`;
@@ -126,7 +126,7 @@
     function paint() {
       const v = currentVariant();
       root.innerHTML = `
-        <div class="pd-media tone-${p.category}"><div class="placeholder">${p.emoji || "🥜"}</div></div>
+        <div class="pd-media tone-${p.category}"><img src="${p.image}" alt="${p.name}" loading="lazy" width="600" height="600"></div>
         <div class="pd-info">
           <div class="pd-cat">${categoryName(p.category)}</div>
           <h1>${p.name}</h1>
