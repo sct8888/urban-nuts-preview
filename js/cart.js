@@ -50,7 +50,7 @@
           name: product.name,
           variantLabel: variant.label,
           price: variant.price,
-          emoji: product.emoji,
+          image: product.image,
           qty: qty
         });
       }
@@ -216,7 +216,7 @@
     body.innerHTML = items.map(function (i) {
       return `
         <div class="cart-item" data-key="${i.key}">
-          <div class="cart-item-img">${i.emoji || "🥜"}</div>
+          <div class="cart-item-img"><img src="${(getProduct(item.id)||{}).image || item.image || \'\'}" alt="" width="72" height="72"></div>
           <div>
             <h4>${i.name}</h4>
             <div class="meta">${i.variantLabel} · ${window.URBAN_NUTS.formatZAR(i.price)}</div>
