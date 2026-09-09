@@ -2,19 +2,19 @@
 <html lang="en-ZA">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Urban Nuts · Premium Nuts & Dried Fruit | Cape Town Preview</title>
   <meta name="description" content="Modern website preview for Urban Nuts — specialty nuts, dried fruit, seeds and mixes. Free delivery over R1 000.">
   <base href="./">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="https://urban-nuts.co.za/wp-content/uploads/2022/02/URBAN-NUTS-logo-1.jpg">
 </head>
 <body>
   <div class="preview-bar">Urban Nuts website preview · not the live store</div>
-  <div class="delivery-banner"><strong>FREE DELIVERY</strong> on orders over <strong>R1 000</strong><span>Cape Town specialty nuts &amp; dried fruit</span></div>
+  <div class="delivery-banner"><strong>FREE DELIVERY</strong> on orders over <strong>R1 000</strong><span> · Cape Town specialty</span></div>
   <header class="site-header">
     <div class="container header-inner">
       <a class="logo" href="index.html">
@@ -22,7 +22,7 @@
         <span>Urban Nuts</span>
       </a>
       <nav class="nav" aria-label="Primary">
-        <a href="index.html">Home</a>
+        <a href="index.html" class="active">Home</a>
         <a href="shop.html">Shop</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
@@ -41,52 +41,65 @@
     <a href="shop.html">Shop</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
+    <div class="nav-meta">
+      <a href="tel:0836277992">083 627 7992</a>
+      <a href="mailto:info@urbannuts.co.za">info@urbannuts.co.za</a>
+    </div>
   </nav>
 
   <main>
     <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <p class="hero-eyebrow">Cape Town · Specialty food</p>
-          <h1>Premium nuts &amp; dried fruit, thoughtfully packed.</h1>
-          <p class="lead">A cleaner, modern shopping experience for Urban Nuts — the same quality you know from our Cape Town stores, redesigned for the web.</p>
-          <div class="hero-ctas">
-            <a class="btn btn-primary" href="shop.html">Shop the range</a>
-            <a class="btn btn-secondary" href="contact.html">Find a store</a>
-          </div>
-          <div class="hero-stats">
-            <div class="hero-stat"><strong>6+</strong><span>Cape Town stores</span></div>
-            <div class="hero-stat"><strong>R1 000+</strong><span>Free delivery threshold</span></div>
-            <div class="hero-stat"><strong>100%</strong><span>Freshness focus</span></div>
-          </div>
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-orb" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <div class="hero-delivery-chip">Free delivery over R1 000</div>
+        <p class="hero-eyebrow">Cape Town · Specialty food</p>
+        <h1>Nuts that hit <em>different.</em></h1>
+        <p class="lead">Premium nuts, dried fruit &amp; mixes — packed fresh in the Mother City. Browse on your phone. Restock the pantry in minutes.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="shop.html">Shop the range</a>
+          <a class="btn btn-secondary" href="contact.html">Find a store</a>
         </div>
-        <aside class="hero-card" aria-label="Delivery highlight">
-          <p class="hero-card-label">Delivery promise</p>
-          <div class="delivery-callout">
-            <h3>Free delivery over R1 000</h3>
-            <p>Orders above R1 000 ship free. Below that, affordable local rates apply. Collect in-store anytime.</p>
-          </div>
-          <ul class="hero-mini-list">
-            <li><span class="dot"></span> Nationwide supplier from Cape Town</li>
-            <li><span class="dot"></span> Safe, secured payment (PayFast / Ozow)</li>
-            <li><span class="dot"></span> Resellers welcome</li>
-          </ul>
-        </aside>
+        <div class="hero-stats">
+          <div class="hero-stat"><strong>6+</strong><span>Cape Town stores</span></div>
+          <div class="hero-stat"><strong>R1 000+</strong><span>Free delivery</span></div>
+          <div class="hero-stat"><strong>100%</strong><span>Freshness focus</span></div>
+        </div>
       </div>
     </section>
+
+    <div class="marquee-wrap" aria-hidden="true">
+      <div class="marquee">
+        <span>Nuts</span><span>Dried Fruit</span><span>Coated</span><span>Seeds &amp; Grains</span><span>Mixes</span>
+        <span>Wasabi Peanuts</span><span>Raw Cashews</span><span>Trail Mix</span><span>Mebos</span><span>Chia Seeds</span>
+        <span>Nuts</span><span>Dried Fruit</span><span>Coated</span><span>Seeds &amp; Grains</span><span>Mixes</span>
+        <span>Wasabi Peanuts</span><span>Raw Cashews</span><span>Trail Mix</span><span>Mebos</span><span>Chia Seeds</span>
+      </div>
+    </div>
 
     <section class="section">
       <div class="container">
         <div class="section-header">
           <div>
-            <p class="section-kicker">Categories</p>
-            <h2>Shop by pantry staple</h2>
+            <p class="section-kicker">Swipe · Categories</p>
+            <h2>Shop by craving</h2>
           </div>
-          <p>From everyday almonds to wasabi peanuts and luxury mixes — curated for home cooks and snackers.</p>
         </div>
-        <div class="cat-grid" id="cat-grid"></div>
+        <div class="cat-scroll" id="cat-grid"></div>
       </div>
     </section>
+
+    <div class="editorial reverse">
+      <div class="editorial-media">
+        <div class="silhouette" aria-hidden="true">🥜</div>
+      </div>
+      <div class="editorial-copy">
+        <p class="section-kicker">The promise</p>
+        <h2>Free delivery when you hit R1 000.</h2>
+        <p>Stock up on almonds, mixes and coated favourites — the cart tracks your progress so you never miss free shipping.</p>
+        <a class="btn btn-primary" href="shop.html">Start an order</a>
+      </div>
+    </div>
 
     <section class="section section-alt">
       <div class="container">
@@ -101,6 +114,11 @@
       </div>
     </section>
 
+    <div class="free-delivery-shout">
+      FREE DELIVERY ON ORDERS OVER R1 000
+      <span>Impossible to miss. Built into the cart.</span>
+    </div>
+
     <section class="section">
       <div class="container">
         <div class="section-header">
@@ -111,7 +129,7 @@
         </div>
         <div class="trust-strip">
           <div class="trust-item">
-            <div class="t-icon">🚚</div>
+            <div class="t-icon">◈</div>
             <h3>Nationwide delivery</h3>
             <p>Straight to your door — free on orders over R1 000.</p>
           </div>
@@ -121,12 +139,12 @@
             <p>Carefully selected, packed and shipped with care.</p>
           </div>
           <div class="trust-item">
-            <div class="t-icon">🔒</div>
+            <div class="t-icon">◎</div>
             <h3>Secure payment</h3>
             <p>PayFast, Ozow and card — trusted SA gateways.</p>
           </div>
           <div class="trust-item">
-            <div class="t-icon">🏪</div>
+            <div class="t-icon">▢</div>
             <h3>Visit our stores</h3>
             <p>Six Cape Town locations plus online ordering.</p>
           </div>
@@ -134,12 +152,24 @@
       </div>
     </section>
 
-    <section class="section" style="padding-top:0">
+    <div class="editorial">
+      <div class="editorial-media" style="background:linear-gradient(145deg,#1a1814,#2c2820)">
+        <div class="silhouette" aria-hidden="true">🍇</div>
+      </div>
+      <div class="editorial-copy" style="background:var(--black);color:var(--white)">
+        <p class="section-kicker" style="color:var(--lime)">Cape Town rooted</p>
+        <h2 style="color:var(--cream)">Six stores. One pantry standard.</h2>
+        <p style="color:rgba(255,255,255,0.6)">From Access Park to Stellenbosch — same specialty range, same freshness obsession.</p>
+        <a class="btn btn-primary" href="contact.html" style="background:var(--lime);color:var(--black);box-shadow:none">Find a store</a>
+      </div>
+    </div>
+
+    <section class="section">
       <div class="container">
         <div class="cta-band">
           <div>
-            <h2>Ready to restock the pantry?</h2>
-            <p>Browse demo products with live cart behaviour — designed for stakeholder review before build-out.</p>
+            <h2>Ready to restock?</h2>
+            <p>Demo catalogue with live cart — tap Add, watch free-delivery progress unlock.</p>
           </div>
           <a class="btn btn-primary" href="shop.html">Start shopping</a>
         </div>
@@ -184,6 +214,19 @@
       </div>
     </div>
   </footer>
+
+  <nav class="mobile-bottom-bar" aria-label="Quick actions">
+    <a href="shop.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+      Shop
+    </a>
+    <button type="button" data-open-cart>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M6 6L5 3H2"/></svg>
+      Cart
+      <span class="cart-count" data-count="0"></span>
+    </button>
+  </nav>
+
   <script src="js/products.js"></script>
   <script src="js/cart.js"></script>
   <script src="js/main.js"></script>
